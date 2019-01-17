@@ -3,16 +3,18 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
       x:Class="ControlTemplateSample.Views.Templates.TemplateThree">
      <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
         <RowDefinition Height="Auto"/>
         <RowDefinition Height="Auto"/>
           <RowDefinition Height="Auto"/>
         <RowDefinition Height="Auto"/>
     </Grid.RowDefinitions>
+     <Label  Grid.Row="0" Font="Bold" HorizontalOptions="CenterAndExpand" FontSize="Large" Text="Template 3"/>
+     
+     <ContentPresenter Grid.Row="1" />
+     <Label  HorizontalOptions="CenterAndExpand" Grid.Row="2" Text="{TemplateBinding BindingContext.Value}"  />
     
-     <ContentPresenter Grid.Row="0" />
-     <Label  HorizontalOptions="CenterAndExpand" Grid.Row="1" Text="{Binding Source={x:Reference stepper}, Path=Value}"  />
-    
-      <Stepper Grid.Row="2" HorizontalOptions="CenterAndExpand" x:Name="stepper" Increment="50" Minimum="0" Maximum="360" Value="250"/>
-     <Label Margin="0,250,0,0" Grid.Row="3" FontSize="Large"  Rotation="{Binding Source={x:Reference stepper}, Path=Value}"  Text="{TemplateBinding BindingContext.Message}"/>
+      <Stepper Grid.Row="3" HorizontalOptions="CenterAndExpand" x:Name="stepper" Increment="50" Minimum="0" Maximum="360" Value="{TemplateBinding BindingContext.Value}"/>
+     <Label Margin="0,250,0,0" Grid.Row="4" FontSize="Large"  Rotation="{TemplateBinding BindingContext.Value}"  Text="{TemplateBinding BindingContext.Message}"/>
     
 </Grid>

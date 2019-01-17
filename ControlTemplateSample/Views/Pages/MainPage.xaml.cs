@@ -24,7 +24,9 @@ namespace ControlTemplateSample.Views.Pages
         {
             InitializeComponent();
             BindingContext = new MainViewModel();
+            picker.SelectedIndex = 0;
             ControlTemplate = template1;
+
 
         }
 

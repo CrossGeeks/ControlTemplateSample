@@ -6,6 +6,8 @@ namespace ControlTemplateSample.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
+        public double Size { get; set; } = 16;
+        public int Value { get; set; } = 250;
         public string Title { get; set; } = "Content Templates";
         public string Name { get; set; }
         public string Description { get; set; }

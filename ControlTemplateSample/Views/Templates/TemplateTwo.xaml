@@ -4,11 +4,13 @@
       x:Class="ControlTemplateSample.Views.Templates.TemplateTwo">
      <Grid.RowDefinitions>
         <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
         <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
-    
-     <ContentPresenter Grid.Row="0" />
-     <ListView Margin="0,20,0,0" Grid.Row="1" ItemsSource="{TemplateBinding BindingContext.Names}" Header="{TemplateBinding BindingContext.Message}">
+     <Label  Grid.Row="0" Font="Bold" HorizontalOptions="CenterAndExpand" FontSize="Large" Text="Template 2"/>
+     
+     <ContentPresenter Grid.Row="1" />
+     <ListView Margin="0,20,0,0" Grid.Row="2" ItemsSource="{TemplateBinding BindingContext.Names}" Header="{TemplateBinding BindingContext.Message}">
         
         <ListView.ItemTemplate>
           <DataTemplate>
