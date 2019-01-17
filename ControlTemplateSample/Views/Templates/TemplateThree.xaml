@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms" 
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+      x:Class="ControlTemplateSample.Views.Templates.TemplateThree">
+     <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    
+     <ContentPresenter Grid.Row="0" />
+     <Label  HorizontalOptions="CenterAndExpand" Grid.Row="1" Text="{Binding Source={x:Reference stepper}, Path=Value}"  />
+    
+      <Stepper Grid.Row="2" HorizontalOptions="CenterAndExpand" x:Name="stepper" Increment="50" Minimum="0" Maximum="360" Value="250"/>
+     <Label Margin="0,250,0,0" Grid.Row="3" FontSize="Large"  Rotation="{Binding Source={x:Reference stepper}, Path=Value}"  Text="{TemplateBinding BindingContext.Message}"/>
+    
+</Grid>

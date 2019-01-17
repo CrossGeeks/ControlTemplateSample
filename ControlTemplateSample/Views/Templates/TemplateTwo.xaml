@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms" 
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+      x:Class="ControlTemplateSample.Views.Templates.TemplateTwo">
+     <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    
+     <ContentPresenter Grid.Row="0" />
+     <ListView Margin="0,20,0,0" Grid.Row="1" ItemsSource="{TemplateBinding BindingContext.Names}" Header="{TemplateBinding BindingContext.Message}">
+        
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <TextCell Text="{Binding .}" />
+          </DataTemplate>
+        </ListView.ItemTemplate>
+     </ListView>
+    
+</Grid>

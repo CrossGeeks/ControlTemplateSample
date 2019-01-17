@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:ControlTemplateSample" x:Class="ControlTemplateSample.Views.Pages.MainPage" Title="{Binding Title}">
+    <StackLayout>
+         <Picker x:Name="picker" Title="Select a template" SelectedIndexChanged="SelectedIndexChanged">
+          <Picker.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+              <x:String>Template 1</x:String>
+              <x:String>Template 2</x:String>
+              <x:String>Template 3</x:String>
+              <x:String>Template 4</x:String>
+            </x:Array>
+          </Picker.ItemsSource>
+        </Picker>
+    </StackLayout>
+</ContentPage>

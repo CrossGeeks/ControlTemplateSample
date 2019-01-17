@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms" 
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+      x:Class="ControlTemplateSample.Views.Templates.TemplateFour">
+     <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+         <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+     <Label  Grid.Row="0" Font="Bold" HorizontalOptions="CenterAndExpand" FontSize="Large" Text="Template 4"/>
+      <Switch Grid.Row="1" HorizontalOptions="CenterAndExpand" Toggled="Handle_Toggled" />
+    <Entry  Grid.Row="2" Placeholder="Name"   Text="{TemplateBinding BindingContext.Name}" />
+     <Entry  Grid.Row="3" Placeholder="Description" Text="{TemplateBinding BindingContext.Description}"/>
+      <Label x:Name="nameLabel" Grid.Row="4" HorizontalOptions="CenterAndExpand" FontSize="Large"  Text="{TemplateBinding BindingContext.Name}"/>
+      <Label x:Name="descriptionLabel" Grid.Row="5" HorizontalOptions="CenterAndExpand" FontSize="Large"  Text="{TemplateBinding BindingContext.Description}"/>
+      <ContentPresenter Grid.Row="6" />
+</Grid>
