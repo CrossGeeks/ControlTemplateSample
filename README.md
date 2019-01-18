@@ -6,4 +6,4 @@
 </p>
 
 
-Blog post: [Using Control Templates in Xamarin Forms](https://www.xamboy.com/2019/01/18/using-control-templates-in-xamarin-forms/(opens in a new tab))
+Blog post: [Using Control Templates in Xamarin Forms](https://www.xamboy.com/2019/01/18/using-control-templates-in-xamarin-forms/)
